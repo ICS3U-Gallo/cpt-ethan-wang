@@ -1,27 +1,29 @@
-# Infinity Shoot
+# Infinity Dodge 
 
 import arcade
 import random
 import os
 
-# Still need to figure out how to get more than one enemy ball to spawn, how to shoot bullets, and record score, and collisions
+# Still need to figure out how to get more than one enemy ball to spawn, and collisions
 
 SCREEN_WIDTH = 640
 SCREEN_HEIGHT = 480
-SCREEN_TITLE = "Infinity Shoot"
+SCREEN_TITLE = "Infinity Dodge"
 MOVEMENT_SPEED = 3
-BULLET_SPEED = 2
+BULLET_SPEED = 5
 INSTRUCTIONS_PAGE_0 = 0
 INSTRUCTIONS_PAGE_1 = 1
 GAME_RUNNING = 2
 GAME_OVER = 3
+current_screen = "Menu"
+ball_x = 0
+
 
 class Ball:
     def __init__(self, position_x, position_y, change_x, change_y, radius, color):
 
         # Take the parameters of the init function above, and create instance variables out of them.
-        file_path = os.path.dirname(os.path.abspath(__file__))
-        os.chdir(file_path)
+
         self.position_x = position_x
         self.position_y = position_y
         self.change_x = change_x
@@ -36,6 +38,13 @@ class Ball:
         arcade.draw_circle_filled(self.position_x, self.position_y, self.radius, self.color)
 
     def update(self):
+
+        global ball_x
+
+        if current_screen == "Play":
+            ball_x =+1
+
+
         # Move the ball
         self.position_y += self.change_y
         self.position_x += self.change_x
@@ -53,9 +62,8 @@ class Ball:
         if self.position_y > SCREEN_HEIGHT - self.radius:
             self.position_y = SCREEN_HEIGHT - self.radius
 
-
 class MyGame(arcade.Window):
-    bullet = arcade.draw_lrtb_rectangle_filled(10, 10, 10, 10, arcade.color.YELLOW)
+
 
 
 
@@ -74,10 +82,6 @@ class MyGame(arcade.Window):
         self.score = 0
         self.player_sprite = None
 
-        self.instructions = []
-        texture = arcade.draw_text("Instructions/Move is left and right arrows < >/Shoot is [space]", 200, 440, arcade.color.BLACK)
-        self.instructions.append(texture)
-
         # Make the mouse disappear when it is over the window.
         # So we just see our object, not the pointer.
         self.set_mouse_visible(False)
@@ -87,9 +91,9 @@ class MyGame(arcade.Window):
 
         # Create our ball
         self.ball = Ball(50, 50, 0, 0, 15, arcade.color.BLACK)
+
         enemy_posx = random.randrange(0, SCREEN_WIDTH)
         enemy_posy = random.randrange(380, 420)
-
         self.enemyball= Ball(enemy_posx, enemy_posy, 0, -1, 15, arcade.color.RED)
 
 
@@ -98,22 +102,13 @@ class MyGame(arcade.Window):
 
         self.score = 0
 
-    def draw_instructions_page(self):
-        page_texture = self.instructions
-        arcade.draw_texture_rectangle(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2,
-                                      page_texture.width,
-                                      page_texture.height, page_texture, 0)
-
-    def draw_game_over(self):
-        output = "Game Over"
-        arcade.draw_text(output, 240, 400, arcade.color.BLACK, 54)
-
-        output = "Click to restart"
-        arcade.draw_text(output, 310, 300, arcade.color.BLACK, 24)
+        # Put enemyball into a sprite list and put that into a loop
 
     def on_draw(self):
         """ Called whenever we need to draw the window. """
         arcade.start_render()
+
+       # self.player_list.draw()
         self.ball.draw()
         self.enemyball.draw()
         arcade.draw_text(f"Score: {self.score}", 10, 20, arcade.color.BLACK, 14)
@@ -121,6 +116,9 @@ class MyGame(arcade.Window):
     def update(self, delta_time):
         self.ball.update()
         self.enemyball.update()
+            #self.score += 1
+
+
 
     def on_key_press(self, key, modifiers):
         """ Called whenever the user presses a key. """
@@ -130,19 +128,6 @@ class MyGame(arcade.Window):
             self.ball.change_x = MOVEMENT_SPEED
         elif key == arcade.key.SPACE:
             pass
-            # The image points to the right, and we want it to point up. So
-            # rotate it.
-
-
-            # Give the bullet a speed
-            self.bullet.change_y = BULLET_SPEED
-
-            # Position the bullet
-            self.bullet.center_x = self.ball.center_x
-            self.bullet.bottom = self.ball.top
-
-            # Add the bullet to the appropriate lists
-            self.bullet.update()
 
 
     def on_key_release(self, key, modifiers):
