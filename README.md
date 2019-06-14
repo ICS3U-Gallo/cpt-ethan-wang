@@ -1,6 +1,6 @@
-# Infinity Shoot
+# Infinity Collect 
 
-Shoot the red enemy balls with your yellow bullets firing from the player black ball. 
+Just collect yellow balls forever till you get bored or your score is over 100. 
 
 
 
