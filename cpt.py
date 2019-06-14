@@ -4,18 +4,14 @@ import arcade
 import random
 import os
 
-# Still need to figure out how to get more than one enemy ball to spawn, and collisions
+# Still need to figure out how to get more than one enemy ball to spawn, bullets, score recording, and collisions
+# A "game over" title and "replay" buttona are also helpful
 
 SCREEN_WIDTH = 640
 SCREEN_HEIGHT = 480
-SCREEN_TITLE = "Infinity Dodge"
+SCREEN_TITLE = "Infinity Shoot"
 MOVEMENT_SPEED = 3
 BULLET_SPEED = 5
-INSTRUCTIONS_PAGE_0 = 0
-INSTRUCTIONS_PAGE_1 = 1
-GAME_RUNNING = 2
-GAME_OVER = 3
-current_screen = "Menu"
 ball_x = 0
 
 
