@@ -1,6 +1,6 @@
-# Infinity Collect 
+# Minute Collect 
 
-Just collect yellow balls forever till you get bored or your score is over 100. 
+Collect as many coins as possible in 30 seconds
 
 
 
