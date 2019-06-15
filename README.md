@@ -1,6 +1,6 @@
-# Minute Collect 
+# Boardman
 
-Collect as many coins as possible in 60 seconds
+Design your player and make the right decisions to help your team to victory!
 
 
 
