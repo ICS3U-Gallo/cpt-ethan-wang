@@ -209,6 +209,7 @@ def main():
     else:
       if hunt2 == 1:
         hunt2o = int(input("""The small forward, Andre Iverson, gets the rebound for the Cheetah and throws an outbound pass to you. Do you: 
+
         [1] Take a quick 3-point shot
         [2] Drive back into the paint and look for someone to pass to
         [3] Take a shot fake, dribble to the right, and take the 3-point shot
@@ -374,7 +375,7 @@ def main():
     print(f"""Semifinals
     
                 Record: 7-1 (1st in Western Conference)
-                Opponent: Holy Cross (5-3, 3rd Western Conference)
+                Opponent: Holy Cross Cardinal (5-3, 3rd Western Conference)
                 Score: 53-50
                 Time: 12:00 left in 3Q
                 {name}'s Playing Status: Bench """)
@@ -390,7 +391,7 @@ def main():
     print()
 
     print(f"""[The Substitution Buzzer sounds]
-          Referee: Christansen 18 off, Christansen {number}on.""")
+          Referee: Christansen 18 off, Christansen {number} on.""")
 
     print()
 
@@ -416,7 +417,7 @@ def main():
         print("Ayton starts cutting to the net, and you feed him a nice bounce pass. However, the Holy Cross defender somehow read the play and feel backwards to intercept the pass.")
 
       elif hc == 3:
-        print("""You hand the ball off the Troy Nordstrom and set the screen for him. He pulls up from almost the logo and splashes it for 3.
+        print("""You hand the ball off to Troy Nordstrom and set the screen for him. He pulls up from almost the logo and splashes it for 3.
         Bench: SNIPER!""")
 
     print()
@@ -424,7 +425,7 @@ def main():
     try:
       hc2 = int(input("""There are only 10.1 seconds left on the clock, and you trail the game 76-77. It is your possession. Coach C calls your second-last timeout.
       Referee: Christansen charged with sixth timeout.
-      Coach C: Okay, so we're down one. Try to be aggressive with the ball. Play it in the paint and only pass to the perimetre if their is no other option. Try to get a foul. Alright?! Let's punch our ticket to the finals! CHEETAH ON ME, CHEETAH ON 3!
+      Coach C: Okay, so we're down one. Try to be aggressive with the ball. Play it in the paint and only pass to the perimetre if there is no other option. Try to get a foul. Alright?! Let's punch our ticket to the finals! CHEETAH ON ME, CHEETAH ON 3!
       
       [The Substitution Buzzer sounds]
       
@@ -462,23 +463,218 @@ def main():
 
     print()
 
-    print(f"""Prefecture finals
+    print(f"""Association Finals
     
               Record: 7-1 (1st in Western Conference)
-              Opponent: St. Francis (8-0, 1st Overall)
-              )
+              Opponent: St. Francis Frogmen (8-0, 1st Overall)
               Score: 0-0
               Time: 12:00 left in 1Q
               {name}'s Playing Status: Starter""")
 
+    print()
+
+    print("""[In the change room] Coach C: Alright gentlemen, listen up. We've worked hard all year for this. We've given our blood, sweat, and tears to have a chance to play in the Finals. This Frogmen team is the best in the country. Their captain, Ty Crane, is expected to have at least 5 D-1 offers. But I know we have the hearts of champions. Never doubt the heart of a champion. They fight hard, we fight harder. They shoot hard, we shoot harder. They pass well, we pass better. They defend well, we defend better. This is it,gentlemen. 48 minutes for glory. I will accept nothing less. Good luck, gentlemen.""")
+
+    print()
+
+    print("You walk onto the court. The sound of the crowd is defeaning. The Finals is such a big deal in this city that they play the game in the professional arena that the local team plays in. Over 10,000 spectators look on as Bogut prepares to take the tip off against Johnson. The referee blows his whistle and throws up the ball. The crowd roars.")
+
+    print()
   
+    try:
+      finals = int(input("""The game immediately reaches a back and forth tempo. The teams trade blows, with the lead changing every possession. The Frogmen give the ball to Crane down low in the post, guarded by Iverson. Your man positions himself to the right of crane for a possible 3-point shot. Do you: 
+    
+      [1] Swipe at the ball in Crane's hands
+      [2] Stay on your man 
+    
+      Please enter the number of your choice: """))
+      print()
 
+    except ValueError:
+      print("Not valid")
+      break
 
+    else:
+      if finals == 1:
+        print(f"""You swipe at the ball in Crane's hands, which surprises him and you get the steal. You race up the court with Ayton in tow and lob up the ball to Ayton for the flush.
+        Coach C: Good hands, {name}!""")
 
+      elif finals == 2:
+        print("You stay on your man and watch Crane work on Iverson. Crane out muscles Iverson and goes to the basket for the lay in.")
 
+    print()
 
+    print("End of 1st quarter: Score is 15-16.")
 
+    print() 
 
+    try:
+      finals2 = int(input("""The Frogmen come out in the second quarter on a 7-0 run. Momentum is shifting their way, and the bleeding must be stopped for the Cheetah. You explode to the net with a nice scissor cross over, but Ty Crane rises up to meet you at the basket. Do you: 
+      [1] Switch hands for the reverse finger roll
+      [2] Change your shot to a running floater
+      [3] Dish a mid-air pass to Nordstrom in the corner
+      
+      Please enter the number of your choice: """))
+      print()
+
+    except ValueError:
+      print("Not valid")
+      break
+
+    else:
+      if finals2 == 1:
+        print("You surprise Crane with the switching of the hands and lay it off the glass for two. The crowd goes wild. The bench is dancing, and momentum has balanced once again.")
+
+      elif finals2 == 2:
+        print("You put up a floater but Crane gets three fingertips on it to send it back. The opponent bench chirps you as you hustle back to guard your man.")
+
+      elif finals2 == 3:
+        print(f"""You throw an absolute bullet to Nordstrom in the corner, who has his feet set. He pulls up and drains the three. 
+        Coach C: Good readjustment, {name}!""")
+
+    print()
+
+    print("""The 2nd quarter comes to an end. 
+          The score: 36-43""")
+
+    print()
+
+    try:
+      finals3 = int(input("""The score is 45-53, and you are bogged down in the post. Iverson's fan is shifting to double team you as the opponent feels they can get the ball from you with the double. Do you: 
+      
+      [1] Step back and fade away for the jumper
+      [2] Put a pass into the lane for the cutting Iverson
+      
+      Please enter the number of your choice: """))
+      print()
+
+    except ValueError:
+      print("Not valid")
+      break
+
+    else:
+      if finals3 == 1:
+        print(f"""You step back and put up a difficult fadeaway. It hits the side of the rim and out. 
+        Coach C: Come on, {name}! Don't make difficult shots like that!""")
+
+      elif finals3 == 2:
+        print(f"""You surprise both your defenders by putting a nifty bounce pass through their legs to the cutting Iverson who takes the ball and lays it in. 
+        Coach C: Good vision, {name}!""")
+
+    print()
+
+    print("The 3rd quarter ends with the score 57-61.")
+
+    print()
+
+    print("Coach C: Listen up, gentlemen. This is the biggest quarter of our lives. I like the offense and I like the defense. The only issue is that they are playing harder than we are. So outplay them everywhere! Play with the hearts of champions that you all have! Alright?! ONE MORE QUARTER! CHEETAH ON ME, CHEETAH ON 3!")
+
+    print()
+
+    try:
+      finals4 = int(input("""Once again, the 4th quarter commences with both teams trading blows. The score is now 69-71 with 3:05 left in the quarter. The Frogmen are called for their 4th team foul, which puts them in the penalty. Bogut inbounds the ball to you. Do you: 
+      
+      [1] Play the pick and roll with Bogut
+      [2] Dish to Nordstrom for one of his signature splashes
+      [3] Work the defender and pull up
+      
+      Please enter the number of your choice: """))
+      print()
+
+    except ValueError:
+      print("Not Valid")
+      break
+
+    else:
+      if finals4 == 1:
+        print("You play the pick with Bogut, who skies up for the one handed dunk. ")
+
+      elif finals4 == 2:
+        print("You pass the ball to Troy and set the screen for him. Unfortunately, his release is slightly off and it hits the back of the rim.")
+
+      elif finals4 == 3:
+        print("""You show off the hand and foot work you've been practicing with Coach C. You gives some crossovers, scissoring, jab steps. Your defender goes on skates and staggers away. You then jump forward and put in the gentle floater.
+        Bench: Where you going?!""")
+
+    print()
+
+    try:
+      finals5 = int(input("""The score is 76-78 with 0:56 left in the game. You run it up the court with Nordstrom in tow. You survey the court. Bogut is down in the post, Ayton a little higher up the key, and Iverson is in the corner. Do you: 
+      
+      [1] Play the pick and roll with Iverson
+      [2] Pass the ball down low to Bogut
+      [3] Set up Nordstrom
+      
+      Please enter the number of your choice: """))
+      print()
+
+    except ValueError:
+      print("Not valid")
+      break
+
+    else:
+      if finals5 == 1:
+        print("You play the pick and roll with Iverson, who, using his strength, muscles is way for the friendly roll on the floater.")
+
+      elif finals5 == 2:
+        print("You try a bounce pass down low to Bogut, but there are too many bodies in the way, and your pass is picked.")
+
+      elif finals5 == 3:
+        print("You hand off to Nordstrom and set the screen for him. Unfortunately, he bobbles the ball and has to re-adjust for the long two-pointer, which he drains.")
+
+    print()
+
+    print("""The score is 80-81 with 0:04 left in the game. Coach C calls his last timeout.
+    Referee: Christansen charged with last timeout.
+    Coach C: It was fate that it came down to this. We all know how this goes down. We've been training for this, and we've had exposure to this many times on our run. This is it gentlemen; this is where champions are made. Never doubt a champion.
+    
+    [The Substitution Buzzer sounds]
+    
+    Champions! CHEETAH ON ME, CHEETAH ON 3!""")
+
+    print()
+
+    try:
+      finals6 = int(input("""Bogut gets the ball to inbound it. The opposition places two defenders on Nordstrom; they know he's the most dangerous. You run up to Bogut and he inbounds the ball to you. There are 4.2 seconds left on the clock. Do you: 
+      
+      [1] Pull up for the long 3-pointer
+      [2] Dribble up the right side of the court for the difficult 8-foot fadeaway
+      
+      Please enter the number of your choice: """))
+      print()
+
+    except ValueError:
+      print("Not valid")
+      break
+
+    else:
+      if finals6 == 1:
+        print("""You put up the ball. 
+              It flies through the air.
+              Time and space seem to stop.
+              The crowd is silent.
+              The silence is defeaning.
+              SWISH.""")
+
+      elif finals6 == 2:
+        print("""You take the ball and start to dribble.
+              There are two defenders on you; one of them is Ty Crane. 
+              You bring your feet together and fall backwards as you release. 
+              The shot goes over Ty's outstretched hand.
+              It flies. 
+              It continues spinning. 
+              It is the longest 0.2 seconds in the world. 
+              THUNK. 
+              THUNK. 
+              THUNK. 
+              THUNK. 
+              SWISH.""")
+
+    print()
+
+    print("Thank you for playing Boardman!!")
+
+    break
 
 if __name__ == "__main__":
   main()
