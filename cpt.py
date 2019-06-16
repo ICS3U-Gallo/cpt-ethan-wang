@@ -65,11 +65,11 @@ def main():
       Ayton: Nice call, rookie. """)
 
     elif darwin == 2:
-      print("""You drive to the basket hard and rise up  for the layup. However, one of the Demons players rises up to meet you and blocks your shot. 
+      print("""You drive to the basket hard and rise up for the layup. However, one of the Demons players rises up to meet you and blocks your shot. 
       Coach C: Nice try, junior.""")
 
     elif darwin == 3: 
-        print("""You pull up from way beyond the arc and   give the shot an expert release. SWISH. Nothing but net.
+        print("""You pull up from way beyond the arc and give the shot an expert release. SWISH. Nothing but net.
         Bench: Buckets! 
         Coach C: COME ON JUNIOR, DON'T TAKE DIFFICULT SHOTS LIKE THAT!""")
 
@@ -102,7 +102,7 @@ def main():
         Coach C: Good play!""")
 
       elif darwin2 == 3:
-        print("""Troy is double teamed and forced to hold onto it for a held ball call.
+        print(f"""Troy is double teamed and forced to hold onto it for a held ball call.
         Troy: Help me out!
         Coach C: Come on, {name}, don't just ball watch!""") 
 
