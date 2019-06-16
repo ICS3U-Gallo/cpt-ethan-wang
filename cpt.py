@@ -540,7 +540,7 @@ def main():
     print()
 
     try:
-      finals3 = int(input("""The score is 45-53, and you are bogged down in the post. Iverson's fan is shifting to double team you as the opponent feels they can get the ball from you with the double. Do you: 
+      finals3 = int(input("""The score is 45-53, and you are bogged down in the post. Iverson's man is shifting to double team you as the opponent feels they can get the ball from you with the double. Do you: 
       
       [1] Step back and fade away for the jumper
       [2] Put a pass into the lane for the cutting Iverson
